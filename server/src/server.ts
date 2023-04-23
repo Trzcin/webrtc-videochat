@@ -4,7 +4,7 @@ import { ExpressPeerServer } from 'peer';
 import { Server as WSServer } from 'socket.io';
 import cors from 'cors';
 import roomRouter from './roomRouter';
-import { PrismaClient } from '.prisma/client';
+import { PrismaClient } from '@prisma/client';
 
 //init
 const app = express();
@@ -99,3 +99,4 @@ io.on('connection', (socket) => {
 
 //start server
 httpServer.listen(5000);
+console.log(`Server listening on port ${5000}`);
